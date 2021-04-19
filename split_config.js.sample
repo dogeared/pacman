@@ -1,0 +1,12 @@
+// Copy this file to: split_config.js and put 
+// in the real value for authorizationKey from
+// your Split instance.
+
+let SplitConfig = {
+    core: {
+        authorizationKey: '<your auth key>',
+        key: 'ANONYMOUS'
+    }
+}
+
+export { SplitConfig };

@@ -1,3 +1,4 @@
+import { SplitConfig } from './split_config.js';
 import { Game } from './modules/game.js';
 
 Object.prototype.clone = function () {
@@ -19,12 +20,7 @@ var el = document.getElementById("pacman");
 var PACMAN = new Game(el);
 
 // TODO - move auth key out of here
-var factory = splitio({
-    core: {
-        authorizationKey: '<your auth key>',
-        key: 'ANONYMOUS'
-    }
-});
+var factory = splitio(SplitConfig);
 
 var splitClient = factory.client();
 
