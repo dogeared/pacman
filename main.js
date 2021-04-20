@@ -1,3 +1,4 @@
+import { SplitFactory } from '@splitsoftware/splitio';
 import { SplitConfig } from './split_config.js';
 import { Game } from './modules/game.js';
 
@@ -20,7 +21,7 @@ var el = document.getElementById("pacman");
 var PACMAN = new Game(el);
 
 // TODO - move auth key out of here
-var factory = splitio(SplitConfig);
+var factory = SplitFactory(SplitConfig);
 
 var splitClient = factory.client();
 
@@ -39,10 +40,5 @@ splitClient.on(splitClient.Event.SDK_UPDATE, function () {
     console.log('The SDK has been updated!');
 });
 
-if (Modernizr.canvas && Modernizr.localstorage &&
-    Modernizr.audio && (Modernizr.audio.ogg || Modernizr.audio.mp3)) {
-    window.setTimeout(function () { PACMAN.init("./"); }, 0);
-} else {
-    el.innerHTML = "Sorry, needs a decent browser<br /><small>" +
-        "(firefox 3.6+, Chrome 4+, Opera 10+ and Safari 4+)</small>";
-}
+
+window.setTimeout(function () { PACMAN.init("./"); }, 0);

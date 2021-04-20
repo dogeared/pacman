@@ -323,8 +323,7 @@ function Game(wrapper) {
         map.draw(ctx);
         dialog("Loading ...");
 
-        var extension = Modernizr.audio.ogg ? 'ogg' : 'mp3';
-
+        var extension = 'mp3';
         var audio_files = [
             ["start", root + "audio/opening_song." + extension],
             ["die", root + "audio/die." + extension],
