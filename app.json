@@ -1,0 +1,17 @@
+{
+    "name": "PacSplitMan",
+    "description": "Pure JS PacMan integrated with split.io",
+    "repository": "https://github.com/splitio-examples/pac-split-man",
+    "logo": "https://pbs.twimg.com/profile_images/1349848402868240384/wId69Sok_400x400.png",
+    "keywords": [
+        "node",
+        "express",
+        "static"
+    ],
+    "env": {
+        "SPLIT_AUTH_KEY": {
+            "description": "Client-Side Split Auth Key",
+            "value": ""
+        }
+    }
+}

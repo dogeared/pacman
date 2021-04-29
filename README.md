@@ -7,5 +7,21 @@ file into [modules](modules).
 
 ## Running
 
-It's pure JS, so no frameworks needed! Just fire up an http server of your choice, like: 
-[http-server])https://www.npmjs.com/package/http-server) and navigate to [index.html](index.html).
+The requirements for running locally or in a deployed environment are minimal.
+
+* node.js
+* express
+
+
+To run locally do the following:
+
+```
+npm install
+SPLIT_AUTH_KEY=<your split client auth key> npm start
+```
+
+## DEPLOYING
+
+You can easily deploy to Heroku using the purple button:
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
